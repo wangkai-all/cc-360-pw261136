@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cursor safety review</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="top">
+      <div>
+        <h1>Cursor safety review</h1>
+        <p class="sub" id="blurb">
+          A source's sort convention changed after collection started. Old cursors still
+          resolve — they just point at different records. Pick a scenario, inspect the
+          evidence, then approve or reject a recovery plan.
+        </p>
+      </div>
+      <div class="top-actions">
+        <select id="scenario" aria-label="Scenario"></select>
+        <button class="btn" id="theme-toggle" aria-label="Toggle color theme">Theme</button>
+      </div>
+    </header>
+
+    <div id="app" class="section"></div>
+  </div>
+  <div class="tooltip" id="tooltip" role="status" aria-live="polite"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
